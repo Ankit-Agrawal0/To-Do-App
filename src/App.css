@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700);
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.strike{
+  text-decoration: line-through;
+  color: rgb(53, 53, 53);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.remove{
+  color: red;
+  background-color: rgba(214,210,210,0);
+  border: none;
+  width: 50px;
+  height: 100%;
+  font-size: 35px;
+  margin-left: auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 0;
+}
+#add_new{
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 2px #7b7878 solid;
+  width: 50%;
+  border-radius:20px;
+  transition: 500ms;
+}
+#add_new::placeholder{
+  color: gray;
+}
+#add_new:hover{
+  border: 2px solid rgb(26,221,26);
+  width: 60%;
+}
+#add_new:active{
+  border-bottom: 2px solid rgb(26,221,26);
+  width: 60%;
+}
+#add{
+  width: 40px;
+  height: 40px;
   color: white;
+  background-color: red;
+  border-radius: 50%;
+  outline:none;
+  transition: 200ms;
+}
+#add:hover, #add:active{
+  width: 50px;
+  height: 50px;
+}
+.form{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+.todo{
+  height: 35px;
+  padding: 5px;
+  margin: 10px;
+  width: 80vw;
+  background-color: #562BCD;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: auto;
+  background-color: #070922;
+}
+.todo #check{
+  margin: 5px;
+}
+.container{
+  background-color: #070922;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.todo:hover{
+  background-color: #FFFFFF;
+  color: black;
+}
+.App{
+  height: 200vh;
+  display: flex;
+  align-items: center;
+  background-color: rgba(249,249,254,0.927);
+}
+h3{
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+}
+.clearAll{
+  border: none;
+  background-color: rgb(59,26,151);
+  border-radius: 15px;
+  padding: 15px;
+  color: rgb(252, 247, 247);
+  margin: 20px;
+  font-family: arial;
+  font-size: 15px;
+  transition: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.clearAll:hover{
+  font-size: 20px;
+  color: white;
+  background-color: rgba(59, 26, 151, 0.616);
+  border-radius: 20px;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Indie Flower', cursive;
+  position: fixed;
+  font-size: 20px;
+  bottom: 0;
+  background-color: rgb(21,21,21);
+  height: 50px;
+  width: 100%;
+  z-index: 1;
+  align-self: flex-end;
+}
+span{
+  align-self:center;
+}
+@media (min-width:800px){
+  .todo{
+    height: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  .remove{
+    font-size: 50px;
+  }
+  .container{
+    height: 100%;
+    width: 100vw;
+    border-radius: 20px;
+  }
+  .App{
+    height: 100vh;
+    width: 100vw;
+  }
+  h3{
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-size: large;
+  }
+  #add{
+    height: 50px;
+    width: 50px;
+  }
+  #add_new{
+    height: 40px;
+    border: navajowhite;
   }
 }
